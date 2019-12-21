@@ -1,0 +1,2 @@
+class GardenImage < ApplicationRecord
+end

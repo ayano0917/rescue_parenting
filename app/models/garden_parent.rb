@@ -1,0 +1,2 @@
+class GardenParent < ApplicationRecord
+end
