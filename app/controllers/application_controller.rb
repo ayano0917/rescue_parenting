@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.permit(
         :sign_up, keys:
         [
-          :child_minder_nickname,,
+          :child_minder_nickname,
           :gender_id,
           :icon,
           :years_of_experience_h,
