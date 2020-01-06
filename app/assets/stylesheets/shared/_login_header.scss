@@ -1,34 +1,39 @@
-.wrapper {
-  font-family: 'din-condensed', "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic Pro", "Meiryo", verdana, "Osaka", "MS PGothic", Sans-Serif;
-  display: flex;
-  .main-header {
-    background: gray;
-    width: 280px;
-    height: 980px;
-    flex-direction: column;
-    position: fixed;
-    &__myPage {
-      font-size: 1.6rem;
-      text-align: center;
-      cursor: pointer;
-    }
+body {
+  background-image: url(aa.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: 100% auto;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 2;
+  font-family: 'Blinker', 'M PLUS 1p', sans-serif;
+}
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+header {
+  width: 960px;
+  height: 100px;
+  margin: 0 auto;
+  .logo {
+    float: left;
+    margin-top: 20px;
   }
-  .main-content {
-    width: 100%;
-    .calender {
-      float: right;
-      padding: 30px 48px;
-      .calender-data {
-        font-size: 2.4rem;
-      }
-      .calender-day {
-        font-size: 1.3rem;
-        display: block;
-        background-color: black;
-        color: white;
-        padding-top: 0.3rem;
-        text-align: right;
-      }
+  .header-nav {
+    float: right;
+    margin-top: 60px;
+    li {
+      // font-family: 'Blinker', sans-serif;
+      float: left;
+      margin: 0 20px;
+      font-size: 18px;
+      a:hover {
+        border-bottom: 1px solid #ffffff;
+        padding-bottom: 7px;
+        text-decoration: none;
+      } 
     }
   }
 }
