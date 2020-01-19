@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   root to: "main#index"
   get 'gardens' => 'gardens#index'
 
+  resources :gardens, only: [:new ,:index, :show, :create, :edit, :update, :destroy] 
+
 end

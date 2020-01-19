@@ -1,8 +1,89 @@
 #wrap {
   clear: both;
-  background-color: #ffffff;
+  background-color: #FFF5F4;
   .content {
-    width: 960px;
+    width: 980px;
     margin: 0 auto;
+    font-family: 'M PLUS 1p', sans-serif;
+    font-weight: lighter;
+    .main-content {
+      h1 {
+        color: #4A4A48;
+        // color: #B8D4FF;
+        // color: #fff;
+        text-align: center;
+        font-size: 40px;
+        padding-top: 30px;
+      }
+      .prefecture {
+        display: inline-block;
+        color: #fff;
+        width: 100px;
+        background-color: #B8D4FF;
+        font-size: 14px;
+        border-radius: 30px;
+        padding: 8px 16px;
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          margin: 20px 20px 20px 0;
+          .card {
+            width: 300px;
+            height: 370px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px #ccc;
+            .hoikumama {
+              margin: 0 12px;
+              border-radius: 5px 5px 0 0;
+              width: 275px;
+              height: 183px;
+            }
+            &__home-price {
+              height: 30px;
+              width: 150px;
+              font-size: 18px;
+              background-color: rgba(50,50,52, 0.5);
+              color: white;
+              border-radius: 0px 30px 30px 0px;
+              align-items: center;
+              position: relative;
+              top: 185px;
+              padding-left: 15px;
+            }
+            p {
+              font-size: 12px;
+              max-width: 250px;
+              padding: 0 30px;
+              height: 90px;
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 4;
+            }
+            &__home-link {
+              height: 58px;
+              display: flex;
+              a {
+                font-size: 19px;
+                display: inline-block;
+                width: 50%;
+                text-align: center;
+                padding-top: 10px;
+                text-decoration: none;
+                color: #FF7979;
+              }
+              a:hover {
+                color: #4A4A48;
+              
+              }
+            }
+
+          }
+        }
+      }
+    }
   }
 }
