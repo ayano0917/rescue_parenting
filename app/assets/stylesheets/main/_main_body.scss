@@ -1,6 +1,7 @@
 #wrap {
+  position: relative;
   clear: both;
-  background-color: #FFF5F4;
+  background-color: #FFF3D3;
   .content {
     width: 980px;
     margin: 0 auto;
@@ -9,8 +10,6 @@
     .main-content {
       h1 {
         color: #4A4A48;
-        // color: #B8D4FF;
-        // color: #fff;
         text-align: center;
         font-size: 40px;
         padding-top: 30px;

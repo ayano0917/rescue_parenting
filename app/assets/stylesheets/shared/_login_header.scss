@@ -1,5 +1,5 @@
 .header-body {
-  background-image: url(aa.jpg);
+  background-image: url(himawari.jpg);
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: fixed;
@@ -7,10 +7,13 @@
   font-size: 15px;
   line-height: 2;
   font-family: 'Blinker', 'M PLUS 1p', sans-serif;
+  position: relative;
+  padding-bottom: 160px;
+  box-sizing: border-box;
   .top-page-head {
     color: #ffffff;
     width: 960px;
-    height: 150px;
+    height: 200px;
     margin: 0 auto;
     .top-page-logo {
       float: left;
