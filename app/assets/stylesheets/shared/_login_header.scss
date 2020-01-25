@@ -1,40 +1,59 @@
-.header-body {
-  background-image: url(himawari.jpg);
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-attachment: fixed;
-  background-size: 100% auto;
-  font-size: 15px;
-  line-height: 2;
-  font-family: 'Blinker', 'M PLUS 1p', sans-serif;
+.login-header-wrap {
   position: relative;
   padding-bottom: 160px;
   box-sizing: border-box;
-  .top-page-head {
-    color: #ffffff;
-    width: 960px;
-    height: 200px;
-    margin: 0 auto;
-    .top-page-logo {
-      float: left;
-      margin-top: 20px;
-    }
-    .header-nav {
-      float: right;
-      margin-top: 60px;
-      li {
+  .header-body {
+    background-image: url(himawari.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: 100% auto;
+    font-size: 15px;
+    line-height: 2;
+    font-family: 'Blinker', 'M PLUS 1p', sans-serif;
+    .top-page-head {
+      color: #ffffff;
+      width: 960px;
+      height: 200px;
+      margin: 0 auto;
+      .top-page-logo {
         float: left;
-        margin: 0 20px;
-        font-size: 18px;
-        a {
-          color: #ffffff;
-          text-decoration: none;
+        margin-top: 20px;
+      }
+      .header-nav {
+        float: right;
+        margin-top: 60px;
+        li {
+          float: left;
+          margin: 0 20px;
+          font-size: 18px;
+          ul {
+            display: none;
+          } 
+          a {
+            color: #ffffff;
+            text-decoration: none;
+          }
+          a:hover {
+            border-bottom: 1px solid #ffffff;
+            padding-bottom: 7px;
+            text-decoration: none;
+          }
         }
-        a:hover {
-          border-bottom: 1px solid #ffffff;
-          padding-bottom: 7px;
-          text-decoration: none;
-        } 
+      }
+    }
+    .add-c {
+      position: absolute;
+      top: 100px;
+      right: 350px;
+      a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      a:hover {
+        border-bottom: 1px solid #ffffff;
+        padding-bottom: 7px;
+        text-decoration: none;
       }
     }
   }
