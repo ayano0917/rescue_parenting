@@ -2,6 +2,10 @@
   %section.new-block
     .new-container
       %h2.new-main-head 保育ホームの情報を入力
+      = form_with model: @garden do |g|
+        = g.text_field :email
+        = g.submit
+
 
 
 
