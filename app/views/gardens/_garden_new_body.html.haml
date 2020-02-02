@@ -2,9 +2,33 @@
   %section.new-block
     .new-container
       %h2.new-main-head 保育ホームの情報を入力
-      = form_with model: @garden do |g|
-        = g.text_field :email
-        = g.submit
+      = form_with model: @garden, class: :garden_form do |g|
+        %p
+          保育ホームの情報を入力してください
+          %br 
+            ホームの登録には本人確認書類が必要です。
+        %p.text-right
+          =link_to "本人確認書類のアップロードについて>>","#"
+
+        %p ＃◯◯さんの保育ホーム
+        %p 住所の入力（市区町村以下の住所は非表示とする事ができます。）
+        .garden_postal_code
+          %label 郵便番号
+          =g.text_field :postal_code, placeholder: '例)1234567'
+        .garden_prefecture
+          %label 都道府県
+          =g.collection_select :prefecture_id, Prefecture.all, :id, :name, {include_blank: '--'}
+        .garden_city
+          %label 市区町村
+          =g.collection_select :city_id, City.all, :id, :name, {include_blank: '--'}
+        .garden_detail
+          %label 番地
+          =g.text_field :detail, placeholder: '例)青山1-1-1'
+        .garden_building
+          %label 建物名
+          =g.text_field :building, placeholder: '例)仮青山ビル1F'
+
+        = g.submit"送信する"
 
 
 
