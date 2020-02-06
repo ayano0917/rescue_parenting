@@ -10,25 +10,27 @@
         %p.text-right
           =link_to "本人確認書類のアップロードについて>>","#"
 
-        %p ＃◯◯さんの保育ホーム
-        %p 住所の入力（市区町村以下の住所は非表示とする事ができます。）
-        .garden_postal_code
+        %p.my-home ＃◯◯さんの保育ホーム
+        %p.home-address ◯ 住所の入力（市区町村以下の住所は非表示とする事ができます。）
+        .home-address__form.garden_postal_code
           %label 郵便番号
-          =g.text_field :postal_code, placeholder: '例)1234567'
-        .garden_prefecture
+          =g.text_field :postal_code, placeholder: '例)1234567',class: "new-form"
+        .home-address__form.garden_prefecture
           %label 都道府県
-          =g.collection_select :prefecture_id, Prefecture.all, :id, :name, {include_blank: '--'}
-        .garden_city
+          =g.collection_select :prefecture_id, Prefecture.all, :id, :name, {include_blank: '--'}, class: "form-select"
+          -# = icon 'fas', 'chevron-down', class: "form-select__icon"
+
+        .home-address__form.garden_city
           %label 市区町村
           =g.collection_select :city_id, City.all, :id, :name, {include_blank: '--'}
-        .garden_detail
+        .home-address__form.garden_detail
           %label 番地
-          =g.text_field :detail, placeholder: '例)青山1-1-1'
-        .garden_building
+          =g.text_field :detail, placeholder: '例)青山1-1-1',class: "new-form"
+        .home-address__form.garden_building
           %label 建物名
-          =g.text_field :building, placeholder: '例)仮青山ビル1F'
+          =g.text_field :building, placeholder: '例)仮青山ビル1F',class: "new-form"
 
-        = g.submit"送信する"
+        = g.submit"送信する", class: "garden-submit"
 
 
 
