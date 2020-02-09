@@ -11,25 +11,36 @@
           =link_to "本人確認書類のアップロードについて>>","#"
 
         %p.my-home ＃◯◯さんの保育ホーム
-        %p.home-address ◯ 住所の入力（市区町村以下の住所は非表示とする事ができます。）
-        .home-address__form.garden_postal_code
-          %label 郵便番号
-          =g.text_field :postal_code, placeholder: '例)1234567',class: "new-form"
-        .home-address__form.garden_prefecture
-          %label 都道府県
-          =g.collection_select :prefecture_id, Prefecture.all, :id, :name, {include_blank: '--'}, class: "form-select"
-          -# = icon 'fas', 'chevron-down', class: "form-select__icon"
-
-        .home-address__form.garden_city
-          %label 市区町村
-          =g.collection_select :city_id, City.all, :id, :name, {include_blank: '--'}
-        .home-address__form.garden_detail
-          %label 番地
-          =g.text_field :detail, placeholder: '例)青山1-1-1',class: "new-form"
-        .home-address__form.garden_building
-          %label 建物名
-          =g.text_field :building, placeholder: '例)仮青山ビル1F',class: "new-form"
-
+        .home-address
+          %h3.home-address__title ◯ 住所の入力（市区町村以下の住所は非表示とする事ができます。）
+          .home-address__form.garden_postal_code
+            %label 郵便番号
+            =g.text_field :postal_code, placeholder: '例)1234567',class: "new-form"
+          .home-address__form.garden_prefecture
+            %label 都道府県
+            =g.collection_select :prefecture_id, Prefecture.all, :id, :name, {include_blank: '--'}, class: "form-select"
+          .home-address__form.garden_city
+            %label 市区町村
+            =g.collection_select :city_id, City.all, :id, :name, {include_blank: '--'}
+          .home-address__form.garden_detail
+            %label 番地
+            =g.text_field :detail, placeholder: '例)青山1-1-1',class: "new-form"
+          .home-address__form.garden_building
+            %label 建物名
+            =g.text_field :building, placeholder: '例)仮青山ビル1F',class: "new-form"
+        .home-detail
+          %h3.home-detail__title ◯ 基本情報の入力
+          .home-detail__form-box
+            .form-box.garden-visit
+              %label 見学の可否
+              =g.collection_select :visit_id, City.all, :id, :name, {include_blank: '--'}
+            .form-box.garden-acceptable_people
+              %label 受け入れ可能人数
+              =g.collection_select :acceptable_people_id, City.all, :id, :name, {include_blank: '--'}
+            .form-box.garden-price
+              .cleafix
+                %label 1時間あたりの利用料金
+                =g.text_field :price, placeholder: '例)800円',class: "new-price",class: "new-form"
         = g.submit"送信する", class: "garden-submit"
 
 

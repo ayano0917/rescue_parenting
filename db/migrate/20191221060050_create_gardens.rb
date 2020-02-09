@@ -8,6 +8,7 @@ class CreateGardens < ActiveRecord::Migration[5.2]
       t.string :building
       t.integer :visit_id, null: false
       t.integer :price, null: false
+      t.integer :acceptable_people, null: false
       t.timestamps
     end
   end
