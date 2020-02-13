@@ -15,4 +15,6 @@ Rails.application.routes.draw do
 
   resources :gardens, only: [:new ,:index, :show, :create, :edit, :update, :destroy] 
 
+  resources :introductions, only: [:index]
+
 end

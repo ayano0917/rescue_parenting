@@ -38,9 +38,11 @@
               %label 受け入れ可能人数
               =g.collection_select :acceptable_people_id, City.all, :id, :name, {include_blank: '--'}
             .form-box.garden-price
-              .cleafix
-                %label 1時間あたりの利用料金
-                =g.text_field :price, placeholder: '例)800円',class: "new-price",class: "new-form"
+              .clearfix
+                %label.l-label 1時間あたりの利用料金
+                .right-price
+                  .r-yen ¥
+                  =g.text_field :price, placeholder: '例)800円',class: "new-price",class: "new-form"
         = g.submit"送信する", class: "garden-submit"
 
 
