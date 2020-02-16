@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: rescue_parenting_production
-  username: rescue_parenting
-  password: <%= ENV['RESCUE_PARENTING_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
