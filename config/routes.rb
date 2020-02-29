@@ -10,11 +10,9 @@ Rails.application.routes.draw do
     passwords:     'child_minders/passwords',
     registrations: 'child_minders/registrations'
   }
-  root to: "main#index"
-  get 'gardens' => 'gardens#index'
+  root to: "introductions#index"
+  get 'main' => 'main#index'
 
-  resources :gardens, only: [:new ,:index, :show, :create, :edit, :update, :destroy] 
-
-  resources :introductions, only: [:index]
+  resources :main, only: [:new ,:index, :show, :create, :edit, :update, :destroy] 
 
 end
