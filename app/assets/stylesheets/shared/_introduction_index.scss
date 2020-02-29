@@ -49,31 +49,6 @@
       font-size: 16px;
       color: #fff;
     }
-    .mu-link {
-      display: flex;
-      .mercari-link {
-        background-color: #FF6461;
-        color: #ffffff;
-        font-size: 30px;
-        font-family: 'Caveat', cursive;
-        width: 185px;
-        display: block;
-        text-align: center;
-        line-height: 50px;
-        margin: 20px 0 0 20px;
-        border-radius: 5px;
-        border: 3px solid #FF6461;
-      }
-      .mercari-link:hover {
-        text-decoration: none;
-        background-color: #fff;
-        color: #FF6461;
-      }
-      .garden-link {
-        margin: 24px 0 0 20px;
-
-      }
-    }
   }
   .intro-footer {
     text-align: center;

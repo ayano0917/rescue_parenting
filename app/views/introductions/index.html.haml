@@ -5,9 +5,10 @@
       %nav
         %ul.intro-header-nav
           %li
-            =link_to "works",{ anchor: "works"}
+            =link_to "works","#works"
+
           %li
-            =link_to "profile",{ anchor: "about"}
+            =link_to "profile","#about"
     .intro-wrap
       .intro-content
         %h1.intro-heading
@@ -17,12 +18,7 @@
         %p.intro-about
           このWebサイトは、自身で制作したアプリケーションを紹介するポートフォリオサイトです。
           %br
-            クリックすると各アプリケーションへ移動できます。作成途中のアプリケーションもあります。ご容赦ください。
-        %ul.mu-link
-          %li.mercari-link 
-            = link_to 'Freemarket', 'http://3.114.73.8/'
-          %li.garden-link 
-            =link_to image_tag("/images/white-logo.png", width: '165px', height: '49px', alt: "Garden"),"main"
+            作成途中のアプリケーションもあります。ご容赦ください。
     %footer.intro-footer
       %small 2020 portfolio by Ayano
 
