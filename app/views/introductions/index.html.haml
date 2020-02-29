@@ -2,6 +2,12 @@
   %section#top
     %header.intro-header
       .intro-header-logo Portfolio
+      %nav
+        %ul.intro-header-nav
+          %li
+            =link_to "works",{ anchor: "works"}
+          %li
+            =link_to "profile",{ anchor: "about"}
     .intro-wrap
       .intro-content
         %h1.intro-heading
@@ -20,6 +26,37 @@
     %footer.intro-footer
       %small 2020 portfolio by Ayano
 
+  %section#works
+    .works-container
+      %h2.works-title works
+      .works-wrap
+        .first-image
+          = link_to image_tag("/images/freemarket-image.jpg", size: "220x298", alt: "フリマアプリ", class: "first-image--picture"), 'http://3.114.73.8/'
+        .first-about
+          %h3.first-about__app-name Freemarket
+          %ul.first-about__app-detail
+            %li
+              ・概要：フリーマーケットアプリ。個人間での物品販売が可能。
+            %li  
+              ・開発環境：ruby2.5.1/Rails5.0.7.2/MySQL5.6/Haml/Scss/jQuery//GitHub/AWS
+            %li
+              ・4人でのチーム開発(担当箇所：DB設計、商品出品に関わる開発)
+            %li
+              ・ID:nagoya/Pass:1111(アクセス時に必要です)
+        .second-image
+          = link_to image_tag("/images/garden-top.jpg", size: "220x280", alt: "保育ホーム", class: "second-image--picture"),"main"
+        .second-about
+          %h3.second-about__app-name Garden
+          %ul.second-about__app-detail
+            %li
+              ・概要：子どもを預けたい人、預かる事ができる人双方を繋ぐ保育ホーム検索アプリ
+            %li
+              ・開発環境：ruby2.5.1/Rails5.2.4/MySQL5.6/Haml/Scss/jQuery//GitHub/AWS
+            %li
+              ・個人製作
+            %li
+              ※制作途中です
+
   %section#about
     .about-container
       %h2.about-title PROFILE
@@ -28,30 +65,14 @@
           = image_tag("/images/myimage.jpeg", size: "220x220", alt: "顔写真", class: "about-detail__photo--icon")
         .about-detail__right
           %p 
-            愛知県出身の会社員。プログラミングは2019年6月頃から始めました。短大は保育科、3年次編入をした4年制大学にて広告について学びました。営業職として就職後、念願の海外へ。
+            愛知県出身の会社員。プログラミングは2019年6月頃から始めました。短大は保育科、3年次編入をした4年制大学にて広告について学びました。
             %br
-              インド→オーストラリア→マレーシア→台湾を周りたくさんの人に助けられながら半年後に帰国。帰国後は、キャッシュレス決済に関わる会社にて事務職として現在まで勤務してきました。ものづくりに興味をひかれ、IT業界への転職を目指して日々勉強中。
-
-  %section#works
-    .works-container
-      %h2.works-title works
-      .works-wrap
-        .first Freemarket
-        .first__about
-          %p
-            ・概要：フリーマーケットアプリ。個人間での物品販売が可能。
-            ・開発環境：ruby2.5.1/Rails5.0.7.2/MySQL5.6/Haml/Scss/jQuery//GitHub/AWS
-            ・4人でのチーム開発
-            %p
-              担当箇所：DB設計、商品出品に関わる開発
-        .second Garden
-        .second__about
-          %p
-            ・概要：子どもを預けたい人、預かる事ができる人双方を繋ぐ保育ホーム検索アプリ(開発途中)。
-            ・開発環境：ruby2.5.1/Rails5.2.4/MySQL5.6/Haml/Scss/jQuery//GitHub/AWS
-            ・個人製作
+              営業職として就職後、念願の海外へ。
+              インド→オーストラリア→マレーシア→台湾を周りたくさんの人に助けられながら半年後に帰国。
+              %br 帰国後は、キャッシュレス決済に関わる会社にて事務職として現在まで勤務してきました。ものづくりに興味をひかれ、IT業界への転職を目指して日々勉強中。
 
     %section#contact
+
 
 
 

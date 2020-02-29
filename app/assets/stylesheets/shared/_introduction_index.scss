@@ -7,7 +7,7 @@
   background-size: cover;
   height: 100vh;
   .intro-header {
-    color: #ffffff;
+    color: #fff;
     height: 30vh;
     margin: 0 auto;
     .intro-header-logo {
@@ -16,6 +16,23 @@
       font-family: 'Caveat', cursive;
       float: left;
       margin: 4vw 0 0 8vw;
+    }
+    .intro-header-nav {
+      font-family: 'Caveat', cursive;
+      font-size: 2.5vw;
+      color: #fff;
+      float: right;
+      margin: 100px 300px 0 0;
+      li {
+        float: left;
+        margin: 0 20px;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:visited {
+        color: #fff;
+      }
     }
   }
   .intro-content {
@@ -68,25 +85,94 @@
     }
   }
 }
-#about {
-  height: 100vh;
+#works {
+  height: 103vh;
   background-color: #fff;
   color: #333;
+  text-align: center;
+  .works-container {
+    padding: 80px 30px;
+    .works-title {
+      display: inline;
+      margin: 30px 0 15px;
+      font-size: 8vh;
+      border-bottom: double 4px #333;
+      padding-bottom: 10px;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+    .works-wrap {
+      width: 980px;
+      margin: 50px auto;
+      position: relative;
+      .first-image {
+        float: left;
+      }
+      a:hover img {
+        opacity: 0.5;
+      }
+      .first-about {
+        text-align: left;
+        position: absolute;
+        left: 230px;
+        &__app-name {
+          font-size: 2rem;
+        }
+        &__app-detail {
+          font-size: 0.8rem;
+          padding-left: 10px;
+          line-height: 2.5rem;
+          li {
+            line-height: 2.5rem;
+          }
+        }
+      }
+      .second-image {
+        position: absolute;
+        top: 240px;
+        right: 0px;
+      }
+      .second-about {
+        position: absolute;
+        top: 240px;
+        right: 230px;
+        text-align: right;
+        &__app-name {
+          font-size: 2rem;
+          text-align: right;
+        }
+        &__app-detail {
+          font-size: 0.8rem;
+          padding-right: 10px;
+          li {
+            line-height: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+#about {
+  height: 100vh;
+  background-color: #4169e1;
+  color: #fff;
   text-align: center;
   .about-container {
     padding: 10vh 7vh;
     .about-title {
       display: inline-block;
       margin: 30px 0 15px;
-      font-size: 7vh;
-      border-bottom: double 4px #999;
+      font-size: 8vh;
+      color: #fff;
+      border-bottom: double 4px #fff;
       padding-bottom: 10px;
       letter-spacing: 2px;
       font-weight: bold;
     }
     .about-detail {
       display: flex;
-      margin-top: 30px;
+      margin-top: 50px;
       padding: 20px 190px;
       &__photo {
         padding-left: 30px;
@@ -105,9 +191,6 @@
       }
     }
   }
-}
-#works {
-  height: 100vh;
 }
 
 
