@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   get 'main' => 'main#index'
 
   resources :main, only: [:new ,:index, :show, :create, :edit, :update, :destroy] 
-
+  resources :gardens, only: [:new ,:index, :show, :create, :edit, :update, :destroy] 
+  resources :sign_ups, only: [:new, :create]
 end

@@ -1,0 +1,23 @@
+%main.sign_ups_main
+  %section.sign_ups_block
+    .sign_ups_container
+      %h2.sign_ups_head 保育者登録
+      = form_with model: @child_minder, class: :child_minder_form do |ch|
+        .minder_icon
+          %label 保育者アイコン
+          =ch.file_field :image, class: "minder-icon"
+        .minder_introduction
+          %label 紹介文
+          =ch.file_
+
+        .minder_name
+          %label ニックネーム
+          =ch.text_field :child_minder_nickname, placeholder: '例)ホームさん',class: "minder_form"
+        .minder_gender
+          %label 性別
+          %span.minder_gender__reference
+          =ch.collection_select :gender_id, Gender.all, :id, :name, {include_blank: '--'}
+        .minder_experinece
+          %label 経験年数
+          = ch.collection_select :years_of_experience_id, Years_of_experience_h.all, :id, :name, {prompt: "--"}
+        = ch.submit"送信する", class: "child_minder-submit"
