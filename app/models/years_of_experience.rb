@@ -1,4 +1,4 @@
-class Years_of_experience < ActiveHash::Base
+class YearsOfExperience < ActiveHash::Base
   self.data = [
       {id: 1, name: '1年'}, {id: 2, name: '2年'}, {id: 3, name: '3年'},
       {id: 4, name: '4年'}, {id: 5, name: '５年'}, {id: 6, name: '６年'},

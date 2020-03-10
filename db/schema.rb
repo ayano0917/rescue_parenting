@@ -20,12 +20,11 @@ ActiveRecord::Schema.define(version: 2019_12_21_060218) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "icon"
+    t.string "introduction"
     t.string "child_minder_nickname"
     t.integer "gender_id"
-    t.string "icon"
-    t.integer "years_of_experience_h"
-    t.integer "years_of_experience_y"
-    t.string "introduction"
+    t.integer "years_of_experience_id"
     t.index ["email"], name: "index_child_minders_on_email", unique: true
     t.index ["reset_password_token"], name: "index_child_minders_on_reset_password_token", unique: true
   end
@@ -75,23 +74,14 @@ ActiveRecord::Schema.define(version: 2019_12_21_060218) do
   end
 
   create_table "gardens", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "room_name", null: false
-    t.integer "management_id", null: false
-    t.integer "start_year", null: false
-    t.integer "start_month", null: false
-    t.integer "start_day", null: false
-    t.integer "postal_code", null: false
+    t.string "postal_code", null: false
     t.integer "prefecture_id", null: false
     t.integer "city_id", null: false
     t.string "detail"
     t.string "building"
-    t.integer "childcare_person_num", null: false
-    t.integer "acceptance_children_num", null: false
-    t.integer "accepting_children_num", null: false
-    t.integer "acceptance_age_id", null: false
-    t.integer "business_open", null: false
-    t.integer "business_close", null: false
     t.integer "visit_id", null: false
+    t.integer "price", null: false
+    t.integer "acceptable_people", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
