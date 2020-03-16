@@ -2,13 +2,15 @@
   %section.sign_up_block
     .sign_up_container
       %h2.sign_up_head 保育者登録
-      = form_with model: @childMinder, class: :child_minder_form do |ch|
+      = form_with model: @childMinder, url: { action: "create" }, class: :child_minder_form do |ch|
         .minder_icon
-          %label 保育者アイコン
-          =ch.file_field :image, class: "minder_icon__form"
+          保育者アイコン
+          %label{for: "m-icon",class: "m-icon-mask"}
+            %i.icon-camera.fas.fa-camera.fa-3x
+            =ch.file_field :image, class: "m-icon-file label-hide", id: "m-icon"
         .minder_introduction
           %label 紹介文
-          =ch.text_field :child_minder_introduction, placeholder: '例)紹介文',class: "minder_introduction__form"
+          =ch.text_area :child_minder_introduction, placeholder: '例)普段のお世話で意識している事、こだわり等、特色をご記入ください。',class: "minder_introduction__form", rows: "5", maxlength: 1000
         .minder_name
           %label ニックネーム
           =ch.text_field :child_minder_nickname, placeholder: '例)ホームさん',class: "minder_name__form"
