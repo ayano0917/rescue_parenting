@@ -19,5 +19,13 @@
           =ch.collection_select :gender_id, Gender.all, :id, :name, {prompt: '--'}
         .minder_experinece
           %label 経験年数
-          = ch.collection_select :years_of_experience_id, YearsOfExperience.all, :id, :name, {prompt: "--"}
+          = ch.collection_select :years_of_experience_id, YearsOfExperience.all, :id, :name, {prompt: "--"}        
+        .minder_e-mail
+          %label メールアドレス
+          =ch.email_field :email, placeholder: "PC・携帯どちらでも可", class: "minder_e-mail__form"
+        .minder_pass
+          %label パスワード
+          =ch.password_field :password, placeholder: "7文字以上", class: "minder_pass__form"
+          %label パスワード(確認用)
+          =ch.password_field :password_confirmation, placeholder: "7文字以上", class: "minder_pass__form2"
         = ch.submit"送信する", class: "child_minder-submit"

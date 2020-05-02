@@ -1,5 +1,5 @@
 class Garden < ApplicationRecord
-  has_many :child_minders
+  belongs_to :child_minder
   has_many :children
   has_many :garden_parent
   has_many :contact_book
@@ -7,4 +7,5 @@ class Garden < ApplicationRecord
   has_many :garden_image
   has_many :parent
 
+  
 end

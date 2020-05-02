@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'main/index'
+  # get 'main/index'
   devise_for :parents, controllers: {
     sessions:      'parents/sessions',
     passwords:     'parents/passwords',
